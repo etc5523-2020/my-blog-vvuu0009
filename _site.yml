@@ -1,0 +1,13 @@
+name: "Blog Post 1"
+title: "ETC5523: Communicating with Data Blog"
+author: "Vinny Vu"
+description: |
+  This blog created for the Monash University subject ETC5523: Communcating with Data to discuss the current state of the coronavirus
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article

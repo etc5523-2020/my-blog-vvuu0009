@@ -1,0 +1,124 @@
+---
+title: "Current State of Coronavirus Cases in Dominican Republic "
+description: |
+  This article assesses the current state of conronavirus cases in Dominican Republic as at 31th July 2020
+author:
+  - name: Vinny Vu
+    affiliation: Master's Student at Monash University
+date: 08-31-2020
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: mybib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+```{r, include=FALSE}
+library(coronavirus)
+library(tidyverse)
+library(plotly)
+library(data.table)
+library(DT)
+library(lubridate)
+library(kableExtra)
+```
+
+```{r coronavirus_data }
+data("coronavirus")
+covid19_DomRep <- coronavirus %>%
+  filter(country == "Dominican Republic") %>%
+    arrange(date)
+
+```
+
+# Current State of Coronavirus Cases in Dominican Republic 
+
+Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus [@WHO] first reported in December 2019 in Wuhan City in China [@aus-health] Currently there are no specific vaccines or treatments for the disease, [@aus-health] causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. For the purposes I have chosen to assess the state of coronavirus in the Dominican Republic as at the July 31th 2020.
+
+Data has been taken from the coronavirus package from Github [@coronavirus] which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control [@coronavirus]. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered. 
+
+Figure \@ref(fig:interactive) is an interactive table showing the summary of weekly cases in the Dominican Republic including the confirmed, death and recovered cases. From the table we can see the weekly confirmed cases increases steadily within the early weeks with the first case in week 1. The growing in cases across time increases at an almost exponential rate showing how quickly the spread of the virus can occur. The weekly confirmed cases peaks at 10,200 cases in week 30. Although the weekly is growing across time the deaths have managed to remain stable staying under 100 cases across the whole period. Weekly recovered cases has however increased across the period peaking at 6,266 recovered in week 31.
+
+
+```{r interactive, fig.cap= "Weekly Coronavirus Cases in The Dominican Republic"}
+covid19_DomRep %>%
+  select(date,type,cases) %>%
+  pivot_wider(id_cols = date, names_from = type, values_from = cases) %>%
+  mutate(Week = week(date),
+         month = month(date)) %>%
+  group_by(Week) %>%
+  mutate(min = min(date), max = max(date)) %>%
+  mutate(Dates = paste(min,max, sep = " to ")) %>%
+  ungroup()%>%
+  group_by(Week, Dates) %>%
+  summarise(`Confirmed Cases` = sum(confirmed),
+            Death = sum(death),
+            Recovered = sum(recovered)) %>%
+  filter(Week > 8) %>%
+  mutate(Week = scales::comma(Week,1),
+         `Confirmed Cases`= scales::comma(`Confirmed Cases`,1),
+         Death = scales::comma(Death,1),
+         Recovered = scales::comma(Recovered,1)) %>%
+ datatable(escape = FALSE,
+            options = list(paging = FALSE,
+                           dom = "t",
+                           fnDrawCallback = htmlwidgets::JS(
+  '
+function(){
+  HTMLWidgets.staticRender();
+}
+'
+)))
+```
+
+
+Table \@ref(tab:table) is a static table to show the summary of the cases each month. The table inclues the total/cumulative cases, deaths and recovered at the end of each month showing as at the 31st of July there are almost 70,000 total/cumulative coronavirus cases in the Dominican Republic. 
+
+```{r table, fig.cap = "Dominican Republic Coronavirus Cases Summary by Month", fig.align = 'center'}
+covid19_DomRep %>%
+  select(date,type,cases) %>%
+  pivot_wider(id_cols = date, names_from = type, values_from = cases) %>%
+  mutate(week = week(date),
+         Month = lubridate::month(date, label = TRUE, abbr = FALSE)) %>%
+  group_by(Month) %>%
+  summarise(`Confirmed Cases` = sum(confirmed),
+            Deaths = sum(death),
+            `Recovered Cases` = sum(recovered)) %>%
+  mutate("Total Cases" = cumsum(`Confirmed Cases`),
+         "Total Deaths" = cumsum(Deaths),
+         "Total Recovered" = cumsum(`Recovered Cases`)) %>%
+  mutate(`Total Cases`= scales::comma(`Total Cases`,1),
+         `Total Deaths` = scales::comma(`Total Deaths`,1),
+         `Total Recovered` = scales::comma(`Total Recovered`,1)) %>%
+  select(Month, starts_with("Total")) %>%
+  kable(align = "lrrrrrrr",
+        booktabs = TRUE,
+        caption =  "Dominican Republic Coronavirus Cases Summary by Month")
+```
+
+Figure \@ref(fig:plot) plots the daily coronavirus cases in the Dominican Republic up until the 31st of July 2020. 
+
+```{r plot, fig.cap= "Daily Corona Cases in Dominican Republic", fig.align = 'center'}
+plot <- covid19_DomRep %>%
+  select(date,type,cases) %>%
+  pivot_wider(id_cols = date, names_from = type, values_from = cases) %>%
+  ggplot(aes(x = date,
+             y = confirmed,
+             color = "red")) +
+  geom_line() +
+  labs(y = "daily cases",
+       title = "Daily Corona Cases in Dominican Republic") + 
+  theme(legend.position = "none")
+
+ggplotly(plot)
+```
+
+This blog post as been made through Distill [@distill] with the following R packages:   
+coronavirus [@coronavirus], tidyverse [@tidyverse], plotly [@plotly], data.table [@datatable], DT [@DT], lubridate [@lubridate] and kableExtra [@kableExtra]

@@ -1,0 +1,5 @@
+---
+title: "ETC5523: Communicating with Data Blog - Vinny Vu"
+site: distill::distill_website
+listing: posts
+---

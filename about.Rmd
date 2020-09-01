@@ -1,0 +1,17 @@
+---
+title: "About this blog"
+description: 
+ More about this blog 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## About the Blog 
+This blog created for the Monash University subject ETC5523: Communicating with Data to discuss the current state of the coronavirus. Link for the Monash Business Analytics course can be found [here](https://numbat.space/) 
+
+## About Me 
+
+I am Vinny Vu, currently a student at Monash University completing my Masters of Business Analytics expected to graduate in 2021. For further information follow the [link](https://www.linkedin.com/in/vinny-vu-809bb1139/) for my Linkdin profile.  
+
