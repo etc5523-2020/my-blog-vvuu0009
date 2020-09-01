@@ -1,0 +1,18 @@
+[
+  {
+    "path": "posts/post1/",
+    "title": "Current State of Coronavirus Cases in Dominican Republic ",
+    "description": "This article assesses the current state of conronavirus cases in Dominican Republic as at 31th July 2020",
+    "author": [
+      {
+        "name": "Vinny Vu",
+        "url": {}
+      }
+    ],
+    "date": "2020-08-31",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-09-01T14:40:48+10:00",
+    "input_file": {}
+  }
+]
