@@ -100,7 +100,8 @@ covid19_DomRep %>%
   select(Month, starts_with("Total")) %>%
   kable(align = "lrrrrrrr",
         booktabs = TRUE,
-        caption =  "Dominican Republic Coronavirus Cases Summary by Month")
+        caption =  "Dominican Republic Coronavirus Cases Summary by Month") %>%
+  kable_styling(position = "center")
 ```
 
 Figure \@ref(fig:plot) plots the daily coronavirus cases in the Dominican Republic up until the 31st of July 2020. 
