@@ -15,3 +15,6 @@ This blog created for the Monash University subject ETC5523: Communicating with 
 
 I am Vinny Vu, currently a student at Monash University completing my Masters of Business Analytics expected to graduate in 2021. For further information follow the [link](https://www.linkedin.com/in/vinny-vu-809bb1139/) for my Linkdin profile.  
 
+```{r fig-1, fig.align='center'}
+knitr::include_graphics("image.PNG")
+```
