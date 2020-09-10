@@ -1,0 +1,44 @@
+---
+title: "Current State of Coronavirus Cases in The Netherlands"
+description: |
+  This article assesses the current state of conronavirus cases in The Netherlands as at 31th July 2020
+author:
+  - name: Vinny Vu
+    affiliation: Master's Student at Monash University
+date: 08-31-2020
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: mybib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+```{r, include=FALSE}
+library(coronavirus)
+library(tidyverse)
+library(plotly)
+library(data.table)
+library(DT)
+library(lubridate)
+library(kableExtra)
+```
+
+```{r coronavirus_data }
+data("coronavirus")
+covid19_Neth <- coronavirus %>%
+  filter(country == "Netherlands") %>%
+    arrange(date)
+
+```
+
+```{r}
+head(covid19_Neth) %>% kable() %>% kable_styling()
+```
+
