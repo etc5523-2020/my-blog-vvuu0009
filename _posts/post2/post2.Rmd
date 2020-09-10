@@ -24,8 +24,6 @@ knitr::opts_chunk$set(echo = FALSE)
 library(coronavirus)
 library(tidyverse)
 library(plotly)
-library(data.table)
-library(DT)
 library(lubridate)
 library(kableExtra)
 ```
@@ -34,11 +32,43 @@ library(kableExtra)
 data("coronavirus")
 covid19_Neth <- coronavirus %>%
   filter(country == "Netherlands") %>%
-    arrange(date)
+  arrange(date) %>%
+  filter(date >= "2020-02-27")
 
 ```
 
+
 ```{r}
 head(covid19_Neth) %>% kable() %>% kable_styling()
+```
+
+```{r}
+covid19_Neth %>%
+  select(date,type,cases) %>%
+  group_by(date,type) %>%
+  summarise(cases = sum(cases)) %>%
+  ggplot(aes(x = date,
+             y = cases,
+             color = type)) +
+  geom_line()
+```
+
+```{r}
+covid19_Neth_cum <- covid19_Neth %>%
+  select(date,type,cases) %>%
+  group_by(date,type) %>%
+  summarise(cases = sum(cases)) %>%
+  pivot_wider(names_from = type,
+              values_from = cases) %>%
+  ungroup() %>%
+  mutate(`total cases` = cumsum(confirmed),
+         `total deaths` = cumsum(death)) 
+```
+```{r}
+cum_plot <- covid19_Neth_cum %>%
+  ggplot(aes(x = date, y = `total cases`)) +
+  geom_line(fill = "blue")
+
+ggplotly(cum_plot)
 ```
 
