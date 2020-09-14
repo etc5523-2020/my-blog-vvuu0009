@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/post2/",
+    "title": "Current State of Coronavirus Cases in The Netherlands",
+    "description": "This article assesses the current state of conronavirus cases in The Netherlands as at 31th July 2020",
+    "author": [
+      {
+        "name": "Vinny Vu",
+        "url": {}
+      }
+    ],
+    "date": "2020-09-14",
+    "categories": [],
+    "preview": "posts/post2/post2_files/figure-html5/neth-line-1.png",
+    "last_modified": "2020-09-14T14:30:57+10:00",
+    "input_file": "post2.utf8.md"
+  },
+  {
     "path": "posts/post1/",
     "title": "Current State of Coronavirus Cases in Dominican Republic ",
     "description": "This article assesses the current state of conronavirus cases in Dominican Republic as at 31th July 2020",
@@ -14,21 +30,5 @@
     "preview": {},
     "last_modified": "2020-09-10T14:20:16+10:00",
     "input_file": {}
-  },
-  {
-    "path": "posts/post2/",
-    "title": "Current State of Coronavirus Cases in The Netherlands",
-    "description": "This article assesses the current state of conronavirus cases in The Netherlands as at 31th July 2020",
-    "author": [
-      {
-        "name": "Vinny Vu",
-        "url": {}
-      }
-    ],
-    "date": "2020-08-31",
-    "categories": [],
-    "preview": "posts/post2/post2_files/figure-html5/unnamed-chunk-3-1.png",
-    "last_modified": "2020-09-10T15:09:01+10:00",
-    "input_file": "post2.utf8.md"
   }
 ]

@@ -5,7 +5,7 @@ description: |
 author:
   - name: Vinny Vu
     affiliation: Master's Student at Monash University
-date: 08-31-2020
+date: 09-14-2020
 output:
   distill::distill_article:
     self_contained: false
@@ -23,12 +23,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r, include=FALSE}
 library(coronavirus)
 library(tidyverse)
-library(plotly)
-library(lubridate)
-library(kableExtra)
 ```
 
-```{r coronavirus_data }
+```{r coronavirus_data}
 data("coronavirus")
 covid19_Neth <- coronavirus %>%
   filter(country == "Netherlands") %>%
@@ -38,22 +35,33 @@ covid19_Neth <- coronavirus %>%
 ```
 
 
-```{r}
-head(covid19_Neth) %>% kable() %>% kable_styling()
-```
+Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus [@WHO] first reported in December 2019 in Wuhan City in China [@aus-health] Currently there are no specific vaccines or treatments for the disease, [@aus-health] causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. For the purposes I have chosen to assess the state of coronavirus in the Netherlands as at the July 31th 2020.
 
-```{r}
+Data has been taken from the coronavirus package from Github [@coronavirus] which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control [@coronavirus]. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered. 
+
+Currently as at 13th of September 2020 the Dutch government has set out guidelines and basic rules such as 1.5 meres of social distancing around home and private gatherings, [@Netherlands]. Figure \@ref(fig:neth-line) shows the daily confirmed and death coronavirus cases in Netherlands as at the 31st of July 2020. For purposes of analyses we will be diving deeper into the daily confirmed and death cases in the following data stories. 
+
+```{r neth-line, fig.cap= "Daily confirmed and death coronavirus cases in Netherlands as at 31 July 2020 with date on the x-axis and daily cases on the y-axis"}
 covid19_Neth %>%
   select(date,type,cases) %>%
   group_by(date,type) %>%
   summarise(cases = sum(cases)) %>%
+  filter(type != "recovered") %>%
   ggplot(aes(x = date,
              y = cases,
              color = type)) +
-  geom_line()
+  geom_line() +
+  labs(y = "daily cases",
+       title = "Daily confirmed and death coronavirus cases in Netherlands as at 31 July 2020",
+       color = "Case Type") +
+  theme(plot.title.position = "plot",
+        panel.grid.minor = element_line(color = "white",
+                                        size = 1.1,
+                                        linetype = "dotted"),
+        axis.ticks.length = unit(3, "mm"))
 ```
 
-```{r}
+```{r cum-data}
 covid19_Neth_cum <- covid19_Neth %>%
   select(date,type,cases) %>%
   group_by(date,type) %>%
@@ -64,11 +72,80 @@ covid19_Neth_cum <- covid19_Neth %>%
   mutate(`total cases` = cumsum(confirmed),
          `total deaths` = cumsum(death)) 
 ```
-```{r}
+
+# Netherlands Daily Confirmed Coronavirus Cases 
+
+Figure \@ref(fig:cum-cases) shows the line graph of the cumulative confirmed coronavirus cases. From the plot we can see from mid March to the start of May there is a sharp climb in confirmed cases exceeding 40,000 total cases. Following this the confirmed cases slows down reaching a plateau. However, in late July we see a pickup in total cases suggesting a potential second wave. This is further supported by the graphic in Figure \@ref(fig:confirmed-cases-plot) where we see a peak of 1,346 daily cases on the 10th of April. TOwards the end of July we see a pickup in daily confirmed cases further suggesting a potential second wave.   
+
+```{r cum-cases, fig.cap="Cumulative coronavirus cases in Netherlands as at 31 July 2020 with date on the x-axis and cumulative cases on the y-axis"}
 cum_plot <- covid19_Neth_cum %>%
   ggplot(aes(x = date, y = `total cases`)) +
-  geom_line(fill = "blue")
+  geom_line(colour = "red") +
+  labs(title = "Cumulative Coronavirus Cases in Netherlands as at 31 July 2020") +
+  theme(plot.title.position = "plot",
+        panel.grid.minor = element_line(color = "white",
+                                        size = 1.2,
+                                        linetype = "dotted"))
 
-ggplotly(cum_plot)
+cum_plot
 ```
 
+```{r confirmed-cases-plot, fig.cap= "Daily confirmed coronavirus cases in Netherlands as at 31 July 2020 with date on the x-axis and daily cases on the y-axis"}
+confirmed_cases_plot <- covid19_Neth %>%
+  select(date,type,cases) %>%
+  group_by(date,type) %>%
+  summarise(cases = sum(cases)) %>%
+  filter(type == "confirmed") %>%
+  ggplot(aes(x = date,
+             y = cases)) +
+  geom_line(colour = "red") +
+  labs(title = "Daily confirmed coronavirus cases in Netherlands as at 31 July 2020",
+       y = "daily confirmed cases") +
+  theme(plot.title.position = "plot",
+        panel.grid.minor = element_line(color = "white",
+                                        size = 1.2,
+                                        linetype = "dotted"))
+
+confirmed_cases_plot
+```
+
+# Netherlands Daily Coronavirus Deaths
+
+Figure \@ref(fig:cum-deaths) shows the line graph of the cumulative coronavirus related deaths in the Netherlands as at 31 July 2020. From the plot we can see mid March to mid May there is a sharp increased in coronavirus related deaths. After this date there is a steady reduction in deaths which appear to stabilize around the low 6 thousands. This is further supported by the graphic in Figure \@ref(fig:death-cases-plot) which shows the daily coronavirus deaths. From the graphic we can see a sharp increased in daily deaths peaking at 234 on the 7th of April 2020 followed by a steady reduction in cases falling below 5 cases from June onward. At some dates we see negative figures measuring miscalculations from pior dates.    
+
+```{r cum-deaths, fig.cap="Cumulative coronavirus deaths in Netherlands as at 31 July 2020 with date on the x-axis and cumulative deaths on the y-axis"}
+cum_plot <- covid19_Neth_cum %>%
+  ggplot(aes(x = date, y = `total deaths`)) +
+  geom_line(colour = "blue") +
+  labs(title = "Cumulative Coronavirus Deaths in Netherlands as at 31 July 2020") +
+  theme(plot.title.position = "plot",
+        panel.grid.minor = element_line(color = "white",
+                                        size = 1.2,
+                                        linetype = "dotted"),
+        axis.ticks.length = unit(3, "mm"))
+
+cum_plot
+```
+
+```{r death-cases-plot, fig.cap= "Daily coronavirus deaths in Netherlands as at 31 July 2020 with date on the x-axis and daily cases on the y-axis"}
+death_cases_plot <- covid19_Neth %>%
+  select(date,type,cases) %>%
+  group_by(date,type) %>%
+  summarise(cases = sum(cases)) %>%
+  filter(type == "death") %>%
+  ggplot(aes(x = date,
+             y = cases)) +
+  geom_line(color = "blue") +
+  labs(y = " daily deaths",
+       title = "Daily coronavirus deaths in Netherlands as at 31 July 2020") +
+  theme(plot.title.position = "plot",
+        panel.grid.minor = element_line(color = "white",
+                                        size = 1.2,
+                                        linetype = "dotted"),
+        axis.ticks.length = unit(3, "mm"))
+
+death_cases_plot
+```
+
+This blog post as been made through Distill [@distill] with the following R packages:   
+coronavirus [@coronavirus] and tidyverse [@tidyverse]
