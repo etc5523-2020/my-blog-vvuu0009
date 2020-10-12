@@ -26,9 +26,8 @@ Coronavirus disease (COVID-19) is an infectious disease caused by a newly discov
 
 Data has been taken from the coronavirus package from Github [@coronavirus] which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control [@coronavirus]. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered. 
 
-Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included. 
+Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths [@worldometer]. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included. 
 
-https://www.worldometers.info/coronavirus/
 
 # Self Review 
 
@@ -63,4 +62,7 @@ Inclusion of a choropleth map with the colour representing the cumulative confir
 ### What are some things that I'd like to add that cannot be done yet due to limitation in data or technology? 
 
 It is hard to compare case numbers across countries due to the large population differences across countries. Proportion of case numbers by countries populations should be used to improve comparability across countries and continents. However, these values are not included in the coronavirus data set. Further, it may be interesting to assess the effects of population densities (population per kilometer squared) on the spread of coronavirus. In densely populated areas it is harder to contain the spread of the virus due to the lack of ability to socially distance and reduce movement.
+
+
+This blog post as been made through Distill [@distill]
 

@@ -45,6 +45,8 @@
   <meta name="citation_reference" content="citation_title=Coronavirus: The 2019 novel coronavirus covid-19 (2019-nCoV) dataset;citation_publication_date=2020;citation_author=Rami Krispin;citation_author=Jarrett Byrnes"/>
   <meta name="citation_reference" content="citation_title=Coronavirus;citation_publisher=World Health Organization"/>
   <meta name="citation_reference" content="citation_title=What you need to know about coronavirus (covid-19);citation_publication_date=2020;citation_publisher=Australian Government Department of Health;citation_author=Australian Government Department Health"/>
+  <meta name="citation_reference" content="citation_title=Distill: â€™R markdownâ€™ format for scientific and technical writing;citation_publication_date=2020;citation_author=JJ Allaire;citation_author=Rich Iannone;citation_author=Yihui Xie"/>
+  <meta name="citation_reference" content="citation_title=Coronavirus cases:;citation_publication_date=2020"/>
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -980,8 +982,7 @@
 <h1 id="introduction">Introduction</h1>
 <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus <span class="citation" data-cites="WHO">(“Coronavirus,” <a href="#ref-WHO" role="doc-biblioref">n.d.</a>)</span> first reported in December 2019 in Wuhan City in China <span class="citation" data-cites="aus-health">(Health <a href="#ref-aus-health" role="doc-biblioref">2020</a>)</span> Currently there are no specific vaccines or treatments for the disease, <span class="citation" data-cites="aus-health">(Health <a href="#ref-aus-health" role="doc-biblioref">2020</a>)</span> causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. In the blog post I will introducing and reviewing the shiny application I have made to discuss the current state of coronavirus around the world as at 31st July 2020.</p>
 <p>Data has been taken from the coronavirus package from Github <span class="citation" data-cites="coronavirus">(Krispin and Byrnes <a href="#ref-coronavirus" role="doc-biblioref">2020</a>)</span> which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control <span class="citation" data-cites="coronavirus">(Krispin and Byrnes <a href="#ref-coronavirus" role="doc-biblioref">2020</a>)</span>. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered.</p>
-<p>Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included.</p>
-<p><a href="https://www.worldometers.info/coronavirus/" class="uri">https://www.worldometers.info/coronavirus/</a></p>
+<p>Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths <span class="citation" data-cites="worldometer">(“Coronavirus Cases:” <a href="#ref-worldometer" role="doc-biblioref">2020</a>)</span>. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included.</p>
 <h1 id="self-review">Self Review</h1>
 <h3 id="what-did-i-do-well">What did I do well?</h3>
 <p>The read.md file is easy to following with dot-points expressing what is included in the application with the session information aesthetically summarised showing all the packages and package versions used.</p>
@@ -999,9 +1000,16 @@
 <p>Inclusion of a choropleth map with the colour representing the cumulative confirmed case numbers can be included the show the locational spread of coronavirus. A slider input representing the specified date can also be included to show the locational spread across time. This would be interesting to add as it will show how and when coronvirus has spread from China into other countries and highlighting areas that have managed to contain or not contain the virus. A map would also provide an aesthetic illustraion of the data.</p>
 <h3 id="what-are-some-things-that-id-like-to-add-that-cannot-be-done-yet-due-to-limitation-in-data-or-technology">What are some things that I’d like to add that cannot be done yet due to limitation in data or technology?</h3>
 <p>It is hard to compare case numbers across countries due to the large population differences across countries. Proportion of case numbers by countries populations should be used to improve comparability across countries and continents. However, these values are not included in the coronavirus data set. Further, it may be interesting to assess the effects of population densities (population per kilometer squared) on the spread of coronavirus. In densely populated areas it is harder to contain the spread of the virus due to the lack of ability to socially distance and reduce movement.</p>
+<p>This blog post as been made through Distill <span class="citation" data-cites="distill">(Allaire, Iannone, and Xie <a href="#ref-distill" role="doc-biblioref">2020</a>)</span></p>
 <div id="refs" class="references" role="doc-bibliography">
+<div id="ref-distill">
+<p>Allaire, JJ, Rich Iannone, and Yihui Xie. 2020. <em>Distill: ’R Markdown’ Format for Scientific and Technical Writing</em>. <a href="https://CRAN.R-project.org/package=distill">https://CRAN.R-project.org/package=distill</a>.</p>
+</div>
 <div id="ref-WHO">
 <p>“Coronavirus.” n.d. <em>World Health Organization</em>. World Health Organization. <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">https://www.who.int/health-topics/coronavirus#tab=tab_1</a>.</p>
+</div>
+<div id="ref-worldometer">
+<p>“Coronavirus Cases:” 2020. <em>Worldometer</em>. <a href="https://www.worldometers.info/coronavirus/">https://www.worldometers.info/coronavirus/</a>.</p>
 </div>
 <div id="ref-aus-health">
 <p>Health, Australian Government Department of. 2020. “What You Need to Know About Coronavirus (Covid-19).” <em>Australian Government Department of Health</em>. Australian Government Department of Health. <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/what-you-need-to-know-about-coronavirus-covid-19">https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/what-you-need-to-know-about-coronavirus-covid-19</a>.</p>
@@ -1065,15 +1073,13 @@
     note = {R package version 0.8},
     url = {https://CRAN.R-project.org/package=distill},
   }
-  
-@misc{Netherlands, 
-    title={Dutch measures against coronavirus}, 
-    url={https://www.government.nl/topics/coronavirus-covid-19/tackling-new-coronavirus-in-the-netherlands}, 
-    journal={Coronavirus COVID-19 | Government.nl}, 
-    publisher={Ministerie van Algemene Zaken}, 
-    author={Ministerie van Algemene Zaken}, 
-    year={2020}, 
-    month={Sep}}
+
+@misc{worldometer, 
+   title={Coronavirus Cases:}, 
+   url={https://www.worldometers.info/coronavirus/}, 
+   journal={Worldometer},
+   year = {2020}
+  }
 </script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
