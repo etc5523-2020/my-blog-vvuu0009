@@ -58,4 +58,9 @@ Finally, the data tables could be improved by coloring the column titles and all
 
 ### What are some things that I'd like to add that's plausible?
 
+Inclusion of a choropleth map with the colour representing the cumulative confirmed case numbers can be included the show the locational spread of coronavirus. A slider input representing the specified date can also be included to show the locational spread across time. This would be interesting to add as it will show how and when coronvirus has spread from China into other countries and highlighting areas that have managed to contain or not contain the virus. A map would also provide an aesthetic illustraion of the data.  
+
 ### What are some things that I'd like to add that cannot be done yet due to limitation in data or technology? 
+
+
+
