@@ -1,0 +1,33 @@
+---
+title: "Shiny Application Refect"
+description: |
+  This article explains and reflects on the shiny application made in Assignment 1 of ETC5523
+author:
+  - name: Vinny Vu
+    affiliation: Master's Student at Monash University
+date: 10-12-2020
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: mybib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+# Introduction 
+
+# Self Review 
+
+### What did I do well?
+
+### What are the poitns I can improve on?
+
+### What are some things that I'd like to add that's plausible?
+
+### What are some things that I'd like to add that cannot be done yet due to limitation in data or technology? 

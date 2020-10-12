@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/post3/",
+    "title": "Shiny Application Refect",
+    "description": "This article explains and reflects on the shiny application made in Assignment 1 of ETC5523",
+    "author": [
+      {
+        "name": "Vinny Vu",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-12",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-10-12T11:07:28+11:00",
+    "input_file": "post3.utf8.md"
+  },
+  {
     "path": "posts/post2/",
     "title": "Current State of Coronavirus Cases in The Netherlands",
     "description": "This article assesses the current state of conronavirus cases in The Netherlands as at 31th July 2020",
@@ -13,7 +29,7 @@
     "categories": [],
     "preview": "posts/post2/post2_files/figure-html5/neth-line-1.png",
     "last_modified": "2020-09-17T16:26:35+10:00",
-    "input_file": "post2.utf8.md"
+    "input_file": {}
   },
   {
     "path": "posts/post1/",
