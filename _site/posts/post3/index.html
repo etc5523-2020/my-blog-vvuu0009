@@ -43,6 +43,9 @@
 
 <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=Coronavirus: The 2019 novel coronavirus covid-19 (2019-nCoV) dataset;citation_publication_date=2020;citation_author=Rami Krispin;citation_author=Jarrett Byrnes"/>
+  <meta name="citation_reference" content="citation_title=Coronavirus;citation_publisher=World Health Organization"/>
+  <meta name="citation_reference" content="citation_title=What you need to know about coronavirus (covid-19);citation_publication_date=2020;citation_publisher=Australian Government Department of Health;citation_author=Australian Government Department Health"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -1325,11 +1328,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <h1 id="introduction">Introduction</h1>
+<p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus <span class="citation" data-cites="WHO">(“Coronavirus,” <a href="#ref-WHO" role="doc-biblioref">n.d.</a>)</span> first reported in December 2019 in Wuhan City in China <span class="citation" data-cites="aus-health">(Health <a href="#ref-aus-health" role="doc-biblioref">2020</a>)</span> Currently there are no specific vaccines or treatments for the disease, <span class="citation" data-cites="aus-health">(Health <a href="#ref-aus-health" role="doc-biblioref">2020</a>)</span> causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. In the blog post I will introducing and reviewing the shiny application I have made to discuss the current state of coronavirus around the world as at 31st July 2020.</p>
+<p>Data has been taken from the coronavirus package from Github <span class="citation" data-cites="coronavirus">(Krispin and Byrnes <a href="#ref-coronavirus" role="doc-biblioref">2020</a>)</span> which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control <span class="citation" data-cites="coronavirus">(Krispin and Byrnes <a href="#ref-coronavirus" role="doc-biblioref">2020</a>)</span>. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered.</p>
+<p>Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included.</p>
+<p><a href="https://www.worldometers.info/coronavirus/" class="uri">https://www.worldometers.info/coronavirus/</a></p>
 <h1 id="self-review">Self Review</h1>
 <h3 id="what-did-i-do-well">What did I do well?</h3>
 <h3 id="what-are-the-poitns-i-can-improve-on">What are the poitns I can improve on?</h3>
 <h3 id="what-are-some-things-that-id-like-to-add-thats-plausible">What are some things that I’d like to add that’s plausible?</h3>
-<h3 id="what-are-some-things-that-id-like-to-add-that-cannot-be-done-yet-due-to-limitation-in-data-or-technology">What are some things that I’d like to add that cannot be done yet due to limitation in data or technology?</h3>
+<h3 id="what-are-some-things-that-id-like-to-add-that-cannot-be-done-yet-due-to-limitation-in-data-or-technology" class="unnumbered">What are some things that I’d like to add that cannot be done yet due to limitation in data or technology?</h3>
+<div id="refs" class="references" role="doc-bibliography">
+<div id="ref-WHO">
+<p>“Coronavirus.” n.d. <em>World Health Organization</em>. World Health Organization. <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">https://www.who.int/health-topics/coronavirus#tab=tab_1</a>.</p>
+</div>
+<div id="ref-aus-health">
+<p>Health, Australian Government Department of. 2020. “What You Need to Know About Coronavirus (Covid-19).” <em>Australian Government Department of Health</em>. Australian Government Department of Health. <a href="https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/what-you-need-to-know-about-coronavirus-covid-19">https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/what-you-need-to-know-about-coronavirus-covid-19</a>.</p>
+</div>
+<div id="ref-coronavirus">
+<p>Krispin, Rami, and Jarrett Byrnes. 2020. <em>Coronavirus: The 2019 Novel Coronavirus Covid-19 (2019-nCoV) Dataset</em>. <a href="https://CRAN.R-project.org/package=coronavirus">https://CRAN.R-project.org/package=coronavirus</a>.</p>
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

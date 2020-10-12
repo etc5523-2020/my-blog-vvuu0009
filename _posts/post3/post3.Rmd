@@ -22,6 +22,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction 
 
+Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus [@WHO] first reported in December 2019 in Wuhan City in China [@aus-health] Currently there are no specific vaccines or treatments for the disease, [@aus-health] causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. In the blog post I will introducing and reviewing the shiny application I have made to discuss the current state of coronavirus around the world as at 31st July 2020. 
+
+Data has been taken from the coronavirus package from Github [@coronavirus] which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control [@coronavirus]. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered. 
+
+Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included. 
+
+https://www.worldometers.info/coronavirus/
+
 # Self Review 
 
 ### What did I do well?
