@@ -46,7 +46,15 @@ Inclusion of an additional plotly only showing a restricted timeline and exclusi
 
 Finally, the data table included is themed such that all columns have a black background and white text to match the theme of application. Commas are added case numbers improving the readability of figures and is ordered by decreasing total confirmed numbers to highlight the countries with the highest case numbers. Text is left aligned and numbers right aligned to improve the aesthetics of the table.  
 
-### What are the poitns I can improve on?
+### What are the points I can improve on?
+
+To improve the readability of the about section citations could be interactive. For example, hovering over citation could provide the option to go to the reference item or reference site if clicked on. 
+
+Although, the option of the initially selected items of the select input has been included, it does not appear when the application is run resulting in initial errors when run as data for the table has not been selected.
+
+Outputs from the hover events, provides nonsensical readings as the date figure is converted to a number and the overal aesthetic of the hover event output could be improved. 
+
+Finally, the data tables could be improved by coloring the column titles and all other text white to improve readability. Further, issues around the click items and ordering of the column are present. For example, when clicking to order the table by total confirmed numbers, the output incorrectly orders the rows. 
 
 ### What are some things that I'd like to add that's plausible?
 
