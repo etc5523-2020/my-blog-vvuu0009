@@ -62,5 +62,5 @@ Inclusion of a choropleth map with the colour representing the cumulative confir
 
 ### What are some things that I'd like to add that cannot be done yet due to limitation in data or technology? 
 
-
+It is hard to compare case numbers across countries due to the large population differences across countries. Proportion of case numbers by countries populations should be used to improve comparability across countries and continents. However, these values are not included in the coronavirus data set. Further, it may be interesting to assess the effects of population densities (population per kilometer squared) on the spread of coronavirus. In densely populated areas it is harder to contain the spread of the virus due to the lack of ability to socially distance and reduce movement.
 
