@@ -22,18 +22,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction 
 
-Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus [@WHO] first reported in December 2019 in Wuhan City in China [@aus-health] Currently there are no specific vaccines or treatments for the disease, [@aus-health] causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. In the blog post I will introducing and reviewing the shiny application I have made to discuss the current state of coronavirus around the world as at 31st July 2020. 
+Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus [@WHO] first reported in December 2019 in Wuhan City in China [@aus-health] Currently there are no specific vaccines or treatments for the disease, [@aus-health] causing many countries to enter quarantines and lockdowns to prevent the spread of the disease. In the blog post I will introducing and reviewing the shiny application I have made to discuss the current state of coronavirus around the world as of 31st July 2020. 
 
 Data has been taken from the coronavirus package from Github [@coronavirus] which contains data pulled from the Johns Hopkins University Center for Systems Science and Engineering (JHU CCSE) Coronavirus repository which aggregates data from sources such as the World Health Organization and European Center for Disease Prevention and Control [@coronavirus]. Data from the coronavirus package contains tabular data with dates, locations, case numbers and case type included daily confirmed, death and recovered. 
 
-Currently as at the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths [@worldometer]. The shiny application explores summary figures of confirmed cases, deaths and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases through the use of line-graphs. Finally to compare case numbers across all countries, a datatable showing the total case numbers as at 31 July is included. 
+Currently as of the 12th of October 2020, there are over 37 million confirmed coronavirus cases and over 1 million coronavirus related deaths [@worldometer]. The shiny application explores summary figures of confirmed cases, deaths, and recoveries across different continents with the use of line-graphs and summary data tables. Further, the application explores 6 countries with the highest cumulative coronavirus confirmed cases using line-graphs. Finally, to compare case numbers across all countries, a data table showing the total case numbers as at 31 July is included. 
 
 
-# Self Review 
+# Self-Review 
 
 ### What did I do well?
 
-The read.md file is easy to following with dot-points expressing what is included in the application with the session information aesthetically summarised showing all the packages and package versions used. 
+The read.md file is easy to follow with dot-points expressing what is included in the application with the session information aesthetically summarised showing all the packages and package versions used. 
 
 The application is aesthetically themed into a black and white theme that is easy to read.
 
@@ -41,9 +41,9 @@ The line graph exploring summary case numbers across continents is easy to read 
 
 Further, the plotly included uniquely colours each country line improving the readability of the graph. The legend also orders the countries to reflect the order of heights in the line graph to improve readability. A hover event is also included summarising the x any y coordinates of the points hovered on. 
 
-Inclusion of an additional plotly only showing a restricted timeline and exclusion of the US improve the readability allowing readers to view trends of country figures that are overshadowed by the large magnitude of US figures. Same themes are used across both plotlys to ensure comparability of both plots. 
+Inclusion of an additional plotly only showing a restricted timeline and exclusion of the US improve the readability allowing readers to view trends of country figures that are overshadowed by the large magnitude of US figures. Same themes are used across both plots to ensure comparability of both plots. 
 
-Finally, the data table included is themed such that all columns have a black background and white text to match the theme of application. Commas are added case numbers improving the readability of figures and is ordered by decreasing total confirmed numbers to highlight the countries with the highest case numbers. Text is left aligned and numbers right aligned to improve the aesthetics of the table.  
+Finally, the data table included is themed such that all columns have a black background and white text to match the theme of application. Commas are added to case numbers improving the readability of figures and is ordered by decreasing total confirmed numbers to highlight the countries with the highest case numbers. Text is left aligned and numbers right aligned to improve the aesthetics of the table.  
 
 ### What are the points I can improve on?
 
@@ -51,17 +51,17 @@ To improve the readability of the about section citations could be interactive. 
 
 Although, the option of the initially selected items of the select input has been included, it does not appear when the application is run resulting in initial errors when run as data for the table has not been selected.
 
-Outputs from the hover events, provides nonsensical readings as the date figure is converted to a number and the overal aesthetic of the hover event output could be improved. 
+Outputs from the hover events, provides nonsensical readings as the date figure is converted to a number and the overall aesthetic of the hover event output could be improved. 
 
-Finally, the data tables could be improved by coloring the column titles and all other text white to improve readability. Further, issues around the click items and ordering of the column are present. For example, when clicking to order the table by total confirmed numbers, the output incorrectly orders the rows. 
+Finally, the data tables could be improved by colouring the column titles and all other text white to improve readability. Further, issues around the click items and ordering of the column are present. For example, when clicking to order the table by total confirmed numbers, the output incorrectly orders the rows. 
 
-### What are some things that I'd like to add that's plausible?
+### What are some things that I would like to add that's plausible?
 
-Inclusion of a choropleth map with the colour representing the cumulative confirmed case numbers can be included the show the locational spread of coronavirus. A slider input representing the specified date can also be included to show the locational spread across time. This would be interesting to add as it will show how and when coronvirus has spread from China into other countries and highlighting areas that have managed to contain or not contain the virus. A map would also provide an aesthetic illustraion of the data.  
+Inclusion of a choropleth map with the colour representing the cumulative confirmed case numbers can be included the show the locational spread of coronavirus. A slider input representing the specified date can also be included to show the locational spread across time. This would be interesting to add as it will show how and when coronvirus has spread from China into other countries and highlighting areas that have managed to contain or not contain the virus. A map would also provide an aesthetic illustration of the data.  
 
-### What are some things that I'd like to add that cannot be done yet due to limitation in data or technology? 
+### What are some things that I would like to add that cannot be done yet due to limitation in data or technology? 
 
-It is hard to compare case numbers across countries due to the large population differences across countries. Proportion of case numbers by countries populations should be used to improve comparability across countries and continents. However, these values are not included in the coronavirus data set. Further, it may be interesting to assess the effects of population densities (population per kilometer squared) on the spread of coronavirus. In densely populated areas it is harder to contain the spread of the virus due to the lack of ability to socially distance and reduce movement.
+It is hard to compare case numbers across countries due to the large population differences across countries. Proportion of case numbers by countries populations should be used to improve comparability across countries and continents. However, these values are not included in the coronavirus data set. Further, it may be interesting to assess the effects of population densities (population per kilometre squared) on the spread of coronavirus. In densely populated areas it is harder to contain the spread of the virus due to the lack of ability to socially distance and reduce movement.
 
 
 This blog post as been made through Distill [@distill]
