@@ -42,6 +42,10 @@ The format of the shiny application is very aesthetic and easy to follow highlig
 
 # Is the documents sufficient to get started? 
 
+The overall package documentation provides a succinct summary of what is included in the package. The documentation of the launch_app function is clear and easy to understand. I had trouble understanding the documentation for the stringency function however. Elaboring on what is being plotting in the stringency function could be included as users will not know what the function does until running the application. Further, the `input` argument description is a bit vague, this argument can be left out as there is actually no argument needed to run the function. Providing an example for the interact function could be included to better help users understand how to use the function.      
+
+# Summary 
+
 ## Package Review
 
 *Please check off boxes as applicable, and elaborate in comments below.*
