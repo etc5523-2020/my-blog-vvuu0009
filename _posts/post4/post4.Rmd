@@ -34,6 +34,8 @@ As described in the help file and vignette, I was successfully able to use the c
 
 # Are the improvements that could be made to the code? 
 
+I ran into issues using the launch_app() having trouble locating the the shiny app even after reinstallation. After assessing the code I was unable to find the issue. I think to further improve on the stringency function in the package having an input to select specific countries for plotting rather than selecting all countries can be useful to allow users to manipulate what countries to plot. I came into some issues around use of the stringency only being able to use the function after loading dplyr and ggplot2. I believe has come as functions in dplyr and ggplot2 have been used in the function however, they the function have not been explicitly refered to or imported in the namespace. I would suggest to either reference the function for example `dplyr::filter()` or use `@importFrom magrittr %>%` in the description. 
+
 # Are there improvements that could be made to the shiny app inside the package? 
 
 # Is the documents sufficient to get started? 
