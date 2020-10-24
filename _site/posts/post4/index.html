@@ -44,6 +44,8 @@
 <!--/radix_placeholder_meta_tags-->
   
   <meta name="citation_reference" content="citation_title=Distill: â€™R markdownâ€™ format for scientific and technical writing;citation_publication_date=2020;citation_author=JJ Allaire;citation_author=Rich Iannone;citation_author=Yihui Xie"/>
+  <meta name="citation_reference" content="citation_title=Github: Covidham;citation_publication_date=2020;citation_author= msobanq"/>
+  <meta name="citation_reference" content="citation_title=Pkgdown: Covidham;citation_publication_date=2020;citation_author= msobanq"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
@@ -1326,7 +1328,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="d-article">
 <h1 id="introduction">Introduction</h1>
-<p>In this blog post I will be reviewing Soban’s R package “covidham” made for Assignment 2 of ETC5523 contain coronavirus data, functions and shiny application. This package can be found via Github here. Further, the pkgdown site can be found here. The shiny application contained in the package analysis the state of coronavirus in most Aisan countries being “the most densely populated continent and the origin of the pandemic.”</p>
+<p>In this blog post I will be reviewing Soban’s R package “covidham” made for Assignment 2 of ETC5523 contain coronavirus data, functions and shiny application. This package can be found via Github <a href="https://github.com/etc5523-2020/r-package-assessment-msobanq">here</a> <span class="citation" data-cites="GIT">(msobanq <a href="#ref-GIT" role="doc-biblioref">2020</a><a href="#ref-GIT" role="doc-biblioref">a</a>)</span>. Further, the pkgdown site can be found <a href="https://etc5523-2020.github.io/r-package-assessment-msobanq/">here</a> <span class="citation" data-cites="Pkgdown">(msobanq <a href="#ref-Pkgdown" role="doc-biblioref">2020</a><a href="#ref-Pkgdown" role="doc-biblioref">b</a>)</span>. The shiny application contained in the package analysis the state of coronavirus in most Aisan countries being “the most densely populated continent and the origin of the pandemic.”</p>
 <p>The application contains a plot of Stringency Index (the level of emergency declared and the level of precautions taken by government.) This variable is scaled from 0-100 (100 = strictest.) Further, a scatter plot has been included comparing 3 coronavirus related variables at once across Asian countries (1 variable on the x-axis, 1 on the y-axis and the last variable being the size and colour of the point.) Some variables that can be plotted include, total cases, total deaths, population and more. All variables included can be viewed through the <code>covid_data</code> used to create the package. data tables have been included also showing the total cases, new cases, total deaths, new deaths of specific Asian countries at a particular date.</p>
 <h1 id="what-did-i-think-this-package-would-do-did-it-do-it">What did I think this package would do? Did it do it?</h1>
 <p>At the onset of viewing the github page the readme file provides a clear picture of what the shiny application includes having the introduction slide of the package explaining what is included in the application. The introduction highlights the stringency index plot, 3 variables scatter plot and summary data table. Further, the readme includes descriptions of both the stringency and launch_app functions. The Covid World Data vignette included provides a visualization of the data sets and again explains the functions. However, the interact function has not be included and users would have to go to the reference tab to explore this function.</p>
@@ -1376,6 +1378,12 @@ and a reasonable range of inputs and conditions. All tests pass on the local mac
 <div id="ref-distill">
 <p>Allaire, JJ, Rich Iannone, and Yihui Xie. 2020. <em>Distill: ’R Markdown’ Format for Scientific and Technical Writing</em>. <a href="https://CRAN.R-project.org/package=distill">https://CRAN.R-project.org/package=distill</a>.</p>
 </div>
+<div id="ref-GIT">
+<p>msobanq. 2020a. <em>Github: Covidham</em>. <a href="https://github.com/etc5523-2020/r-package-assessment-msobanq">https://github.com/etc5523-2020/r-package-assessment-msobanq</a>.</p>
+</div>
+<div id="ref-Pkgdown">
+<p>———. 2020b. <em>Pkgdown: Covidham</em>. <a href="https://etc5523-2020.github.io/r-package-assessment-msobanq/">https://etc5523-2020.github.io/r-package-assessment-msobanq/</a>.</p>
+</div>
 </div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
@@ -1399,41 +1407,6 @@ and a reasonable range of inputs and conditions. All tests pass on the local mac
 <!--radix_placeholder_appendices-->
 <div class="appendix-bottom"></div>
 <script id="distill-bibliography" type="text/bibtex">
-@Manual{coronavirus,
-    title = {coronavirus: The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset},
-    author = {Rami Krispin and Jarrett Byrnes},
-    year = {2020},
-    note = {R package version 0.3.0},
-    url = {https://CRAN.R-project.org/package=coronavirus},
-  }
-  
-@misc{WHO, 
-    title={Coronavirus}, 
-    url={https://www.who.int/health-topics/coronavirus#tab=tab_1}, 
-    journal={World Health Organization}, 
-    publisher={World Health Organization}}
-    
-@misc{aus-health, 
-    title={What you need to know about coronavirus (COVID-19)}, 
-    url={https://www.health.gov.au/news/health-alerts/novel-coronavirus-2019-ncov-health-alert/what-you-need-to-know-about-coronavirus-covid-19}, 
-    journal={Australian Government Department of Health}, 
-    publisher={Australian Government Department of Health}, 
-    author={Australian Government Department of Health}, 
-    year={2020}, 
-    month={Aug}}
-    
-@Article{tidyverse,
-    title = {Welcome to the {tidyverse}},
-    author = {Hadley Wickham and Mara Averick and Jennifer Bryan and Winston Chang and Lucy D'Agostino McGowan and Romain FranÃ§ois and Garrett Grolemund and Alex Hayes and Lionel Henry and Jim Hester and Max Kuhn and Thomas Lin Pedersen and Evan Miller and Stephan Milton Bache and Kirill MÃ¼ller and Jeroen Ooms and David Robinson and Dana Paige Seidel and Vitalie Spinu and Kohske Takahashi and Davis Vaughan and Claus Wilke and Kara Woo and Hiroaki Yutani},
-    year = {2019},
-    journal = {Journal of Open Source Software},
-    volume = {4},
-    number = {43},
-    pages = {1686},
-    doi = {10.21105/joss.01686},
-  }
-  
-  
 @Manual{distill,
     title = {distill: 'R Markdown' Format for Scientific and Technical Writing},
     author = {JJ Allaire and Rich Iannone and Yihui Xie},
@@ -1442,18 +1415,20 @@ and a reasonable range of inputs and conditions. All tests pass on the local mac
     url = {https://CRAN.R-project.org/package=distill},
   }
 
-@misc{worldometer, 
-   title={Coronavirus Cases:}, 
-   url={https://www.worldometers.info/coronavirus/}, 
-   journal={Worldometer},
-   year = {2020}
+
+@Manual{GIT,
+    title = {Github: covidham},
+    author = {msobanq},
+    year = {2020},
+    url = {https://github.com/etc5523-2020/r-package-assessment-msobanq},
   }
-  
-@misc{shiny,
-   title = {shiny-assessment-vvuu0009},
-   url = {https://github.com/etc5523-2020/shiny-assessment-vvuu0009},
-   year = {2020},
-   author = {Vinny Vu}}
+
+@Manual{Pkgdown,
+    title = {Pkgdown: covidham},
+    author = {msobanq},
+    year = {2020},
+    url = {https://etc5523-2020.github.io/r-package-assessment-msobanq/},
+  }
 </script>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
