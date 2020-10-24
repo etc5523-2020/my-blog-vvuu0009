@@ -46,6 +46,8 @@ The overall package documentation provides a succinct summary of what is include
 
 # Summary 
 
+Overall, Soban's package and shiny application provided an interesting and insightful take on the state of coronavirus in Asia. From the Stringency Index plot it was interesting to see how early many Asian countries have reacted early to coronavirus reaching high levels of emergency declaration as early as February. Several countries even reach a 100 index level, whereas serval countries have managed to maintain low levels of stringency through early action.  
+
 ## Package Review
 
 *Please check off boxes as applicable, and elaborate in comments below.*
