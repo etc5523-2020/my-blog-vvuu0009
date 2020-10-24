@@ -1,0 +1,48 @@
+---
+title: "Review of covidham Shiny Package"
+description: |
+  In this article explains I will be reviewing Soban's shiny package made for Assignment 2 of ETC5523
+author:
+  - name: Vinny Vu
+    affiliation: Master's Student at Monash University
+date: 10-24-2020
+output:
+  distill::distill_article:
+    self_contained: false
+bibliography: mybib.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+## Package Review
+
+*Please check off boxes as applicable, and elaborate in comments below.*
+
+#### Documentation
+
+The package includes all the following forms of documentation:
+
+- [ ] **Installation instructions:** for the package is found in README  
+- [ ] **Vignette(s)** demonstrating major functionality that runs successfully locally  
+- [ ] **Function Documentation:** for all exported functions in R help  
+- [ ] **Examples** for all exported functions in R Help that run successfully locally  
+
+#### Functionality
+
+- [ ] **Installation:** Installation succeeds as documented.  
+- [ ] **Functionality:** Any functional claims of the software been confirmed.  
+- [ ] **Automated tests:** Unit tests cover essential functions of the package  
+and a reasonable range of inputs and conditions. All tests pass on the local machine.  
+
+
+
+
+This blog post as been made through Distill [@distill]
+

@@ -1,5 +1,21 @@
 [
   {
+    "path": "posts/post4/",
+    "title": "Review of covidham Shiny Package",
+    "description": "In this article explains I will be reviewing Soban's shiny package made for Assignment 2 of ETC5523",
+    "author": [
+      {
+        "name": "Vinny Vu",
+        "url": {}
+      }
+    ],
+    "date": "2020-10-24",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2020-10-24T13:59:23+11:00",
+    "input_file": "post4.utf8.md"
+  },
+  {
     "path": "posts/post3/",
     "title": "Shiny Application Refect",
     "description": "This article explains and reflects on the shiny application made in Assignment 1 of ETC5523",
