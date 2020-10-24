@@ -38,6 +38,8 @@ I ran into issues using the launch_app() having trouble locating the the shiny a
 
 # Are there improvements that could be made to the shiny app inside the package? 
 
+The format of the shiny application is very aesthetic and easy to follow highlighted by the styling in the plots and data tables included. Some improvements I would make to the Stringency index line graph would be to change the label of the y-axis to read "stringency Index" and removing the x-axis label as it is clear date is being plotted. In the 3 variables plot, to improve comparability between the size of the points the legend could be arrange by point size rather than alphabetical order. Further, renaming the variables to excluded any underscores would provide a cleaner look. Lastly, in the data table, column names should remove the underscores and capitalise the first letters. Numbers should also include commas to improve readability of the values.     
+
 # Is the documents sufficient to get started? 
 
 ## Package Review
