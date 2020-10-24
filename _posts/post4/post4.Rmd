@@ -46,29 +46,36 @@ The overall package documentation provides a succinct summary of what is include
 
 # Summary 
 
-Overall, Soban's package and shiny application provided an interesting and insightful take on the state of coronavirus in Asia. From the Stringency Index plot it was interesting to see how early many Asian countries have reacted early to coronavirus reaching high levels of emergency declaration as early as February. Several countries even reach a 100 index level, whereas serval countries have managed to maintain low levels of stringency through early action.  
+Overall, Soban's package and shiny application provided an interesting and insightful take on the state of coronavirus in Asia. From the Stringency Index plot it was interesting to see how early many Asian countries have reacted early to coronavirus reaching high levels of emergency declaration as early as February. Several countries even reach a 100 index level, whereas several countries have managed to maintain low levels of stringency through early action.  
 
-## Package Review
-
-*Please check off boxes as applicable, and elaborate in comments below.*
+# Appendix 
 
 #### Documentation
 
 The package includes all the following forms of documentation:
 
-- [ ] **Installation instructions:** for the package is found in README  
-- [ ] **Vignette(s)** demonstrating major functionality that runs successfully locally  
-- [ ] **Function Documentation:** for all exported functions in R help  
+- [ $\checkmark$ ] **Installation instructions:** for the package is found in README  
+- [ $\checkmark$ ] **Vignette(s)** demonstrating major functionality that runs successfully locally  
+- [ $\checkmark$ ] **Function Documentation:** for all exported functions in R help  
 - [ ] **Examples** for all exported functions in R Help that run successfully locally  
 
 #### Functionality
 
-- [ ] **Installation:** Installation succeeds as documented.  
-- [ ] **Functionality:** Any functional claims of the software been confirmed.  
-- [ ] **Automated tests:** Unit tests cover essential functions of the package  
+- [ $\checkmark$ ] **Installation:** Installation succeeds as documented.  
+- [ $\checkmark$ ] **Functionality:** Any functional claims of the software been confirmed.  
+- [ $\checkmark$ ] **Automated tests:** Unit tests cover essential functions of the package  
 and a reasonable range of inputs and conditions. All tests pass on the local machine.  
 
+- The readme provides clear instructions to install and use the package 
+- Vignettes provides a clear overview of the package. 
+- Function documentation for all functions are included 
+- Examples could be included in function documentation to use as reference
 
+#### Comments
+
+- Installation succeeded with no issues 
+- Functions in the package work however, only after loading servaral other dependency packages 
+- Both function test ran without failing
 
 
 This blog post as been made through Distill [@distill]

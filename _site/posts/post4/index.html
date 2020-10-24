@@ -1338,35 +1338,38 @@ document.addEventListener('DOMContentLoaded', function() {
 <h1 id="is-the-documents-sufficient-to-get-started">Is the documents sufficient to get started?</h1>
 <p>The overall package documentation provides a succinct summary of what is included in the package. The documentation of the launch_app function is clear and easy to understand. I had trouble understanding the documentation for the stringency function however. Elaboring on what is being plotting in the stringency function could be included as users will not know what the function does until running the application. Further, the <code>input</code> argument description is a bit vague, this argument can be left out as there is actually no argument needed to run the function. Providing an example for the interact function could be included to better help users understand how to use the function.</p>
 <h1 id="summary">Summary</h1>
-<p>Overall, Soban’s package and shiny application provided an interesting and insightful take on the state of coronavirus in Asia. From the Stringency Index plot it was interesting to see how early many Asian countries have reacted early to coronavirus reaching high levels of emergency declaration as early as February. Several countries even reach a 100 index level, whereas serval countries have managed to maintain low levels of stringency through early action.</p>
-<h2 id="package-review">Package Review</h2>
-<p><em>Please check off boxes as applicable, and elaborate in comments below.</em></p>
+<p>Overall, Soban’s package and shiny application provided an interesting and insightful take on the state of coronavirus in Asia. From the Stringency Index plot it was interesting to see how early many Asian countries have reacted early to coronavirus reaching high levels of emergency declaration as early as February. Several countries even reach a 100 index level, whereas several countries have managed to maintain low levels of stringency through early action.</p>
+<h1 id="appendix">Appendix</h1>
 <h4 id="documentation">Documentation</h4>
 <p>The package includes all the following forms of documentation:</p>
 <ul>
-<li><input type="checkbox" disabled="" />
-<strong>Installation instructions:</strong> for the package is found in README<br />
+<li>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Installation instructions:</strong> for the package is found in README<br />
 </li>
-<li><input type="checkbox" disabled="" />
-<strong>Vignette(s)</strong> demonstrating major functionality that runs successfully locally<br />
+<li>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Vignette(s)</strong> demonstrating major functionality that runs successfully locally<br />
 </li>
-<li><input type="checkbox" disabled="" />
-<strong>Function Documentation:</strong> for all exported functions in R help<br />
+<li>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Function Documentation:</strong> for all exported functions in R help<br />
 </li>
 <li><input type="checkbox" disabled="" />
 <strong>Examples</strong> for all exported functions in R Help that run successfully locally</li>
 </ul>
 <h4 id="functionality">Functionality</h4>
 <ul>
-<li><input type="checkbox" disabled="" />
-<strong>Installation:</strong> Installation succeeds as documented.<br />
-</li>
-<li><input type="checkbox" disabled="" />
-<strong>Functionality:</strong> Any functional claims of the software been confirmed.<br />
-</li>
-<li><input type="checkbox" disabled="" />
-<strong>Automated tests:</strong> Unit tests cover essential functions of the package<br />
-and a reasonable range of inputs and conditions. All tests pass on the local machine.</li>
+<li><p>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Installation:</strong> Installation succeeds as documented.<br />
+</p></li>
+<li><p>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Functionality:</strong> Any functional claims of the software been confirmed.<br />
+</p></li>
+<li><p>[ <span class="math inline">\(\checkmark\)</span> ] <strong>Automated tests:</strong> Unit tests cover essential functions of the package<br />
+and a reasonable range of inputs and conditions. All tests pass on the local machine.</p></li>
+<li><p>The readme provides clear instructions to install and use the package</p></li>
+<li><p>Vignettes provides a clear overview of the package.</p></li>
+<li><p>Function documentation for all functions are included</p></li>
+<li><p>Examples could be included in function documentation to use as reference</p></li>
+</ul>
+<h4 id="comments">Comments</h4>
+<ul>
+<li>Installation succeeded with no issues</li>
+<li>Functions in the package work however, only after loading servaral other dependency packages</li>
+<li>Both function test ran without failing</li>
 </ul>
 <p>This blog post as been made through Distill <span class="citation" data-cites="distill">(Allaire, Iannone, and Xie <a href="#ref-distill" role="doc-biblioref">2020</a>)</span></p>
 <div id="refs" class="references" role="doc-bibliography">
@@ -1381,6 +1384,15 @@ and a reasonable range of inputs and conditions. All tests pass on the local mac
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
